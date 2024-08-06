@@ -3,7 +3,6 @@ import axiosClient from '../axiosClient';
 export function searchMeals({commit},keyword){
     axiosClient.get(`search.php?s=${keyword}`)
     .then(({data})=>{
-        debugger;
-        commit(`setSearchMeals`,data.meals)
+        commit('setSearchMeals',data.meals)
     })
 }
